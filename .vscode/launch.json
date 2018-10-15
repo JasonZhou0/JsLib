@@ -1,0 +1,47 @@
+{
+   // Use IntelliSense to learn about possible attributes.
+   // Hover to view descriptions of existing attributes.
+   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+   "version": "0.2.0",
+   "configurations": [
+       {
+           "name": "Python",
+           "type": "python",
+           "request": "launch",
+           "stopOnEntry": true,
+           "pythonPath": "${config:python.pythonPath}",
+           "program": "${file}",
+           "cwd": "${workspaceRoot}",
+           "env": {},
+           "envFile": "${workspaceRoot}/.env",
+           "debugOptions": [
+            //    "WaitOnAbnormalExit",
+            //    "WaitOnNormalExit",
+               "RedirectOutput"
+           ]
+       },
+      {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            // "program": "${workspaceFolder}\\Build\\bootloader\\bin\\bootloader.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "internalConsoleOptions": "neverOpen",
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false,
+                }
+            ],
+            //  "preLaunchTask": "gcc_build",
+      },
+   ]
+}

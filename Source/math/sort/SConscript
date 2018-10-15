@@ -1,0 +1,23 @@
+Import('env')
+import os
+
+SourcePath = os.getcwd()[len(env['WorkSpace']):]+'\\'
+TargetBasePath  = env['ObjPath']+SourcePath
+File = {}
+def CheckFile(BasePath,SourcePath):
+   return {BasePath+SourcePath[:-2]:SourcePath}
+   
+# ************BOOT_objects************
+if env['TargetName'] == 'bootloader':
+   File.update(CheckFile(TargetBasePath,'sort.c'))
+
+# ************APP_objects************
+elif env['TargetName'] == 'application':
+   File.update(CheckFile(TargetBasePath,'sort.c'))
+   
+# ************OutPut************
+objects = []
+for key,value in File.items():
+   objects += env.Object(target = key, source = value)
+
+Return('objects')

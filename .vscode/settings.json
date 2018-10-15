@@ -1,0 +1,23 @@
+{
+    "files.autoGuessEncoding": true,
+    "editor.tabSize": 3,
+    "python.pythonPath": "Tools\\Python\\Python37-32\\python.exe",
+    "files.associations": {
+        "stdio.h": "c",
+        "windows.h": "c",
+        "python.h": "c",
+        "checkaccount.h": "c",
+        "array": "c",
+        "*.tcc": "c",
+        "future": "c",
+        "istream": "c",
+        "functional": "c",
+        "tuple": "c",
+        "utility": "c",
+        "display.h": "c",
+        "stm32f4xx.h": "c",
+        "types.h": "c",
+        "sort.h": "c",
+        "string_view": "c"
+    },
+}
